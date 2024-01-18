@@ -1,0 +1,119 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    background: rgba(247, 158, 86, 0.582); /* Fundo semitransparente */
+    z-index: 1;
+    height: 45%;
+    width: 80%;
+    max-width: 800px;
+    max-height: 350px;
+    margin: 0 auto;
+    overflow: hidden; /* Certifique-se de que o conteúdo dentro da div não ultrapasse os limites */
+    
+    /* Adiciona o efeito de desfoque ao conteúdo dentro da div .content */
+    backdrop-filter: blur(8px); /* Ajuste o valor para controlar o nível de desfoque */
+}
+
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+
+nav li a {
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 1s;
+    color: black;
+}
+
+a:hover{
+    color: orange;
+}
+
+
+.Min-bloco {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+#botão{
+    position: relative;
+    top: 75%;
+    right: -45%;
+    padding: 10px;
+    font-size: 15px;
+    border: solid 1px rgba(255, 166, 1, 0.774);
+    border-radius: 8px;
+    background: rgba(255, 166, 0, 0.349);
+    backdrop-filter: blur(8px);
+    transform: color 2s;
+    transition: 1s;
+}
+
+#botão:hover{
+    color: rgb(255, 230, 0);
+    background: rgb(238, 155, 0);
+}
+
+/* Estilos adicionados para tornar o conteúdo mais responsivo */
+@media screen and (max-width: 100%) {
+    .content {
+        width: 90%; /* Ajuste a largura para telas menores */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+    
+}
+
+
